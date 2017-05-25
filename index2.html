@@ -14,27 +14,6 @@
 
 
 <style>
-  #survey{
-    position: fixed;
-    bottom: 20px;
-    right: 0px;
-    width: 175px;
-    height: 100px;
-    border: 3px solid rgb(65,207,161);
-    border-radius: 20px;
-    color: rgb(39,39,39);
-    background-color: rgba(250,250,250,0.88);
-    text-align:center;
-    font-size: 12px;
-    padding: 5px 5px;
-    font-weight: bold;
-  }
-  #close{
-    position: absolute;
-    top: -5px;
-    left: -25px;
-    border-radius: 1px;
-  }
   body {
     color: #eee;
     overflow: hidden;
@@ -169,7 +148,6 @@
       width: 25%;
       height: 100%;
       display: none;
-      overflow-x: scroll;
     }
 
     #interest-close {
@@ -320,7 +298,6 @@
  }
 
   #banner{
-    content:url(http://iskandari.github.io/maps/EMA_med.jpg);
     display: none;
   	position: fixed;
     border-style: solid;
@@ -643,20 +620,6 @@ overflow: auto;
 
     #changeLayer {
       display: none
-    }
-
-    #banner{
-      content:url(http://iskandari.github.io/maps/EMA_med.jpg);
-      display: none;
-    	position: fixed;
-      width: 240px;
-      height: 60px;
-      border-style: solid;
-    	top: calc(50% - 30px);;
-    	left: calc(50% - 120px);
-    	opacity: 0;
-    	z-index:1001;
-
     }
 
     #ema_title {
@@ -1103,7 +1066,7 @@ function renderListings(features) {
 
               $("#interest").children().not('#interest-close').remove();
               $("#interest-close").appendTo("#interest");
-              $('<div style ="font-size:25px; overflow-x: scroll; margin-left:10px; margin-right: 10px; margin-top: 25px">' + prop.title + '</div>' +
+              $('<div style ="font-size:25px; margin-left:10px; margin-right: 10px; margin-top: 25px">' + prop.title + '</div>' +
               '<div style ="font-size:25px; margin-left:10px; margin-top: 25px;"><a href="' + prop.website + '" target="_blank">program details</a></div>').appendTo("#interest");
 
             });
